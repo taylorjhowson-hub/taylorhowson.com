@@ -1,0 +1,26 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="white" stroke="#D8DEE8"/>
+  <text x="112" y="136" fill="#0F172A" font-family="Arial" font-size="38" font-weight="700">Reporting &amp; Partnership Insights</text>
+  <text x="112" y="178" fill="#64748B" font-family="Arial" font-size="21">Referral volume, customer progress, and partnership outcomes in one view.</text>
+  <rect x="112" y="238" width="300" height="142" rx="24" fill="#EEF5F9" stroke="#D8DEE8"/>
+  <text x="148" y="292" fill="#64748B" font-family="Arial" font-size="17" font-weight="700">REFERRALS / MONTH</text>
+  <text x="148" y="342" fill="#7091A8" font-family="Arial" font-size="44" font-weight="700">4,000+</text>
+  <rect x="452" y="238" width="300" height="142" rx="24" fill="#F6EFEA" stroke="#D8DEE8"/>
+  <text x="488" y="292" fill="#64748B" font-family="Arial" font-size="17" font-weight="700">CUSTOMER RECOVERY</text>
+  <text x="488" y="342" fill="#A27E69" font-family="Arial" font-size="44" font-weight="700">~20%</text>
+  <rect x="792" y="238" width="300" height="142" rx="24" fill="#F8F1E8" stroke="#D8DEE8"/>
+  <text x="828" y="292" fill="#64748B" font-family="Arial" font-size="17" font-weight="700">COMPLETED DEALS</text>
+  <text x="828" y="342" fill="#C19066" font-family="Arial" font-size="44" font-weight="700">~240</text>
+  <rect x="1132" y="238" width="300" height="142" rx="24" fill="#F1F5F9" stroke="#D8DEE8"/>
+  <text x="1168" y="292" fill="#64748B" font-family="Arial" font-size="17" font-weight="700">USER ADOPTION</text>
+  <text x="1168" y="342" fill="#475569" font-family="Arial" font-size="44" font-weight="700">~50%</text>
+  <rect x="112" y="448" width="1320" height="260" rx="26" fill="#FFFFFF" stroke="#D8DEE8"/>
+  <text x="154" y="506" fill="#0F172A" font-family="Arial" font-size="25" font-weight="700">Referral trend</text>
+  <rect x="154" y="642" width="164" height="28" rx="14" fill="#D6CFB5"/>
+  <rect x="354" y="602" width="164" height="68" rx="14" fill="#C19066"/>
+  <rect x="554" y="570" width="164" height="100" rx="14" fill="#A27E69"/>
+  <rect x="754" y="532" width="164" height="138" rx="14" fill="#7091A8"/>
+  <rect x="954" y="494" width="164" height="176" rx="14" fill="#3E6D8A"/>
+  <rect x="1154" y="466" width="164" height="204" rx="14" fill="#0F172A"/>
+</svg>

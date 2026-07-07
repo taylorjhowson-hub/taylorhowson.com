@@ -1,0 +1,27 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="white" stroke="#D8DEE8"/>
+  <text x="112" y="136" fill="#0F172A" font-family="Arial" font-size="38" font-weight="700">Connected Partner Ecosystem</text>
+  <text x="112" y="178" fill="#64748B" font-family="Arial" font-size="21">A synchronized referral lifecycle across internal systems, SPS, Uqual APIs, and Salesforce.</text>
+  <g font-family="Arial" font-size="22" font-weight="700">
+    <rect x="128" y="352" width="236" height="128" rx="24" fill="#EEF5F9" stroke="#7091A8"/>
+    <text x="183" y="425" fill="#0F172A">Application</text>
+    <rect x="458" y="242" width="236" height="128" rx="24" fill="#F6EFEA" stroke="#A27E69"/>
+    <text x="530" y="315" fill="#0F172A">SPS</text>
+    <rect x="458" y="462" width="236" height="128" rx="24" fill="#F8F1E8" stroke="#C19066"/>
+    <text x="508" y="535" fill="#0F172A">Salesforce</text>
+    <rect x="788" y="352" width="236" height="128" rx="24" fill="#0F172A"/>
+    <text x="844" y="425" fill="white">Uqual APIs</text>
+    <rect x="1118" y="242" width="282" height="128" rx="24" fill="#EEF5F9" stroke="#7091A8"/>
+    <text x="1170" y="315" fill="#0F172A">Status updates</text>
+    <rect x="1118" y="462" width="282" height="128" rx="24" fill="#F6EFEA" stroke="#A27E69"/>
+    <text x="1188" y="535" fill="#0F172A">Reporting</text>
+  </g>
+  <g stroke-width="8" stroke-linecap="round">
+    <path d="M376 416H444" stroke="#7091A8"/>
+    <path d="M694 306C742 306 742 416 776 416" stroke="#A27E69"/>
+    <path d="M694 526C742 526 742 416 776 416" stroke="#C19066"/>
+    <path d="M1036 416H1104" stroke="#7091A8"/>
+    <path d="M1036 416C1080 416 1080 526 1104 526" stroke="#A27E69"/>
+  </g>
+</svg>

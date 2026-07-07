@@ -1,0 +1,20 @@
+<svg width="1600" height="900" viewBox="0 0 1600 900" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1600" height="900" fill="#F8FAFC"/>
+  <rect x="56" y="56" width="1488" height="788" rx="30" fill="white" stroke="#D8DEE8"/>
+  <text x="112" y="136" fill="#0F172A" font-family="Arial" font-size="38" font-weight="700">Automation</text>
+  <text x="112" y="178" fill="#64748B" font-family="Arial" font-size="21">Connected accounts synchronize activity and update the search workspace.</text>
+  <rect x="156" y="282" width="280" height="188" rx="28" fill="#EEF5F9" stroke="#D8DEE8"/>
+  <text x="212" y="358" fill="#0F172A" font-family="Arial" font-size="25" font-weight="700">Email sync</text>
+  <text x="212" y="398" fill="#64748B" font-family="Arial" font-size="18">Recruiter messages</text>
+  <rect x="660" y="282" width="280" height="188" rx="28" fill="#F6EFEA" stroke="#D8DEE8"/>
+  <text x="704" y="358" fill="#0F172A" font-family="Arial" font-size="25" font-weight="700">Status updates</text>
+  <text x="704" y="398" fill="#64748B" font-family="Arial" font-size="18">Pipeline changes</text>
+  <rect x="1164" y="282" width="280" height="188" rx="28" fill="#F8F1E8" stroke="#D8DEE8"/>
+  <text x="1218" y="358" fill="#0F172A" font-family="Arial" font-size="25" font-weight="700">Next actions</text>
+  <text x="1218" y="398" fill="#64748B" font-family="Arial" font-size="18">Follow-ups surfaced</text>
+  <path d="M448 376H628" stroke="#7091A8" stroke-width="10" stroke-linecap="round"/>
+  <path d="M952 376H1132" stroke="#C19066" stroke-width="10" stroke-linecap="round"/>
+  <rect x="356" y="568" width="888" height="128" rx="28" fill="#0F172A"/>
+  <text x="412" y="626" fill="white" font-family="Arial" font-size="26" font-weight="700">Automated job-search activity feed</text>
+  <text x="412" y="668" fill="#CBD5E1" font-family="Arial" font-size="19">New interview detected - prep workspace created - follow-up reminder scheduled.</text>
+</svg>
