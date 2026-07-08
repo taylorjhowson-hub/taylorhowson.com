@@ -1,6 +1,8 @@
 import Image from "next/image";
 import type { CaseStudy } from "@/lib/content";
 
+const APPLYGRID_URL = "https://applygrid.io/";
+
 export function CaseStudyHero({ study }: { study: CaseStudy }) {
   return (
     <section className="container-pad py-16 sm:py-24">
@@ -26,9 +28,21 @@ export function CaseStudyHero({ study }: { study: CaseStudy }) {
             {study.title}
           </h1>
         </div>
-        <p className="max-w-[700px] text-xl leading-9 text-slate-600">
-          {study.description}
-        </p>
+        <div className="max-w-[700px]">
+          <p className="text-xl leading-9 text-slate-600">
+            {study.description}
+          </p>
+          {study.slug === "applygrid" ? (
+            <a
+              href={APPLYGRID_URL}
+              target="_blank"
+              rel="noreferrer"
+              className="mt-6 inline-flex w-fit items-center justify-center rounded-full bg-[#FFD21E] px-5 py-3 text-sm font-semibold text-slate-950 shadow-sm transition hover:-translate-y-0.5 hover:bg-[#F5B700]"
+            >
+              Visit ApplyGrid
+            </a>
+          ) : null}
+        </div>
       </div>
     </section>
   );

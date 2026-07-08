@@ -7,6 +7,12 @@ import { SectionHeader } from "@/components/SectionHeader";
 import { caseStudies, contact, home } from "@/lib/content";
 
 export default function HomePage() {
+  const orderedCaseStudies = [...caseStudies].sort((a, b) => {
+    if (a.slug === "applygrid") return 1;
+    if (b.slug === "applygrid") return -1;
+    return 0;
+  });
+
   return (
     <main>
       <section className="container-pad relative overflow-hidden py-8 sm:py-14">
@@ -60,7 +66,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="container-pad py-12 sm:py-16">
+      <section className="container-pad pt-12 pb-6 sm:pt-16 sm:pb-8">
         <div className="mx-auto max-w-7xl">
           <div className="mb-10 flex flex-col gap-5 sm:flex-row sm:items-end sm:justify-between">
             <SectionHeader eyebrow="Featured Work" title="Case studies" />
@@ -73,14 +79,14 @@ export default function HomePage() {
             </Link>
           </div>
           <div className="space-y-8">
-            {caseStudies.map((study, index) => (
+            {orderedCaseStudies.map((study, index) => (
               <ProjectCard key={study.slug} study={study} index={index} />
             ))}
           </div>
         </div>
       </section>
 
-      <section className="container-pad py-12 sm:py-16">
+      <section className="container-pad pt-4 pb-12 sm:pt-6 sm:pb-16">
         <div className="mx-auto flex max-w-7xl flex-col gap-6 overflow-hidden rounded-lg border border-slate-900/10 bg-gradient-to-br from-white via-[#FFFBEA] to-[#FFF3B0] p-7 shadow-[0_30px_90px_rgba(15,23,42,0.1)] sm:p-10 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="eyebrow">

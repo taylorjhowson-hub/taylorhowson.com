@@ -32,9 +32,6 @@ export function ImageGallery({ items }: { items: GalleryItem[] }) {
                 <span className="absolute right-3 top-3 grid h-10 w-10 place-items-center rounded-full bg-[#FFD21E] text-slate-950 shadow-sm">
                   <Maximize2 size={17} />
                 </span>
-                <p className="mt-3 px-1 pb-1 text-sm font-bold text-slate-950">
-                  {item.label}
-                </p>
               </div>
             ) : (
               <div className="relative flex min-h-[280px] flex-col justify-between rounded-md bg-[#FFF3B0] p-5 sm:min-h-[380px]">

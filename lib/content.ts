@@ -70,18 +70,13 @@ export const caseStudies: CaseStudy[] = [
       "An AI-powered product designed to bring the modern job search into a single workflow.",
     previewImage: "/images/case-studies/applygrid-workspace-preview.png",
     previewAlt: "ApplyGrid product workspace preview",
-    logoImage: "/images/case-studies/applygrid-logo.jpeg",
-    logoAlt: "ApplyGrid logo",
     executiveSummary: [
       "The modern job search isn't a single task—it's an ongoing workflow spread across dozens of disconnected tools. Existing platforms help people find jobs or track applications, but none manage the entire workflow from discovery to networking to interview preparation. ApplyGrid is my attempt to bring that workflow into a single, AI-powered product.",
     ],
     atAGlance: {
       Role: "Founder & Product Manager",
-      Team: "Placeholder: Team details not provided in source markdown.",
       Timeline: "2026 – Present",
       Product: "ApplyGrid",
-      "Business Impact":
-        "Placeholder: Business impact details not provided in source markdown.",
       Platform: "AI-Powered Job Search Platform",
       Focus: "Product Strategy, UX Design, AI-Assisted Development",
     },
@@ -137,8 +132,8 @@ export const caseStudies: CaseStudy[] = [
         gallery: [
           {
             label: "Opportunity Discovery",
-            src: "/images/case-studies/applygrid-opportunities.svg",
-            alt: "ApplyGrid opportunity discovery visual",
+            src: "/images/case-studies/applygrid-opportunities.png",
+            alt: "ApplyGrid opportunities screen with recommended job matches",
           },
         ],
       },
@@ -165,8 +160,8 @@ export const caseStudies: CaseStudy[] = [
         gallery: [
           {
             label: "AI Workspace",
-            src: "/images/case-studies/applygrid-ai-workspace.svg",
-            alt: "ApplyGrid AI workspace visual",
+            src: "/images/case-studies/applygrid-resume-optimizer.png",
+            alt: "ApplyGrid optimize resume screen",
           },
         ],
       },

@@ -4,38 +4,108 @@ import { ImageGallery } from "@/components/ImageGallery";
 import { MetricCard } from "@/components/MetricCard";
 import { SectionHeader } from "@/components/SectionHeader";
 
-function CopyBlock({ paragraphs }: { paragraphs: string[] }) {
+const APPLYGRID_URL = "https://applygrid.io/";
+
+function LinkedText({ text, study }: { text: string; study: CaseStudy }) {
+  if (study.slug !== "applygrid" || !text.includes("ApplyGrid")) {
+    return <>{text}</>;
+  }
+
+  return (
+    <>
+      {text.split(/(ApplyGrid)/g).map((part, index) =>
+        part === "ApplyGrid" ? (
+          <a
+            key={`${part}-${index}`}
+            href={APPLYGRID_URL}
+            target="_blank"
+            rel="noreferrer"
+            className="font-semibold text-[#C28A00] underline decoration-[#FFD21E] decoration-2 underline-offset-4 transition hover:text-slate-950"
+          >
+            {part}
+          </a>
+        ) : (
+          part
+        ),
+      )}
+    </>
+  );
+}
+
+function CopyBlock({
+  paragraphs,
+  study,
+}: {
+  paragraphs: string[];
+  study: CaseStudy;
+}) {
   return (
     <div className="prose-copy max-w-[800px]">
       {paragraphs.map((paragraph) => (
-        <p key={paragraph}>{paragraph}</p>
+        <p key={paragraph}>
+          <LinkedText text={paragraph} study={study} />
+        </p>
       ))}
     </div>
   );
 }
 
-function ResultsText({ paragraphs }: { paragraphs: string[] }) {
+function ResultsText({
+  paragraphs,
+  study,
+}: {
+  paragraphs: string[];
+  study: CaseStudy;
+}) {
+  const headings = [
+    "Product Outcomes",
+    "Development Outcomes",
+    "Business Impact",
+    "Operational Improvements",
+    "Technical Outcomes",
+  ];
+  const groups = paragraphs.reduce<Array<{ heading?: string; items: string[] }>>(
+    (acc, paragraph) => {
+      if (headings.includes(paragraph)) {
+        acc.push({ heading: paragraph, items: [] });
+        return acc;
+      }
+
+      if (acc.length === 0) {
+        acc.push({ items: [] });
+      }
+      acc[acc.length - 1].items.push(paragraph);
+      return acc;
+    },
+    [],
+  );
+
   return (
-    <div className="prose-copy max-w-[800px]">
-      {paragraphs.map((paragraph) => {
-        const isHeading = [
-          "Product Outcomes",
-          "Development Outcomes",
-          "Business Impact",
-          "Operational Improvements",
-          "Technical Outcomes",
-        ].includes(paragraph);
-        return isHeading ? (
+    <div className="max-w-[900px] space-y-8">
+      {groups.map((group, index) => (
+        <div key={group.heading ?? `results-${index}`}>
+          {group.heading ? (
           <h3
-            key={paragraph}
-            className="mt-8 text-xl font-semibold text-slate-950"
+              className="text-xl font-semibold text-slate-950"
           >
-            {paragraph}
+              {group.heading}
           </h3>
-        ) : (
-          <p key={paragraph}>{paragraph}</p>
-        );
-      })}
+          ) : null}
+          <ul className={`${group.heading ? "mt-4" : ""} grid gap-3`}>
+            {group.items.map((item) => (
+              <li
+                key={item}
+                className="flex gap-3 rounded-lg border border-slate-900/8 bg-white/72 p-4 text-lg leading-8 text-slate-600 shadow-[0_14px_44px_rgba(15,23,42,0.05)]"
+              >
+                <span className="mt-3 h-2 w-2 shrink-0 rounded-full bg-[#FFD21E] ring-4 ring-[#FFF3B0]" />
+                <span>
+                  <LinkedText text={item} study={study} />
+                </span>
+              </li>
+            ))}
+          </ul>
+        </div>
+      ))}
     </div>
   );
 }
@@ -52,7 +122,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
                 key={paragraph}
                 className="mt-0 text-lg leading-9 text-white/78 sm:text-xl"
               >
-                {paragraph}
+                <LinkedText text={paragraph} study={study} />
               </p>
             ))}
           </div>
@@ -72,7 +142,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.36fr_0.64fr]">
           <SectionHeader title="Problem" />
           <div className="mt-6">
-            <CopyBlock paragraphs={study.problem} />
+            <CopyBlock paragraphs={study.problem} study={study} />
           </div>
         </div>
       </section>
@@ -81,7 +151,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.36fr_0.64fr]">
           <SectionHeader title={study.discoveryTitle} />
           <div className="mt-6">
-            <CopyBlock paragraphs={study.discovery} />
+            <CopyBlock paragraphs={study.discovery} study={study} />
           </div>
         </div>
       </section>
@@ -90,7 +160,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
         <div className="mx-auto grid max-w-7xl gap-8 lg:grid-cols-[0.36fr_0.64fr]">
           <SectionHeader title={study.approachTitle} />
           <div className="mt-6">
-            <CopyBlock paragraphs={study.approach} />
+            <CopyBlock paragraphs={study.approach} study={study} />
           </div>
         </div>
       </section>
@@ -100,7 +170,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
           <SectionHeader title={study.solutionTitle} />
           {study.solutionIntro ? (
             <div className="mt-6">
-              <CopyBlock paragraphs={study.solutionIntro} />
+              <CopyBlock paragraphs={study.solutionIntro} study={study} />
             </div>
           ) : null}
           <div className="mt-12 space-y-20">
@@ -115,7 +185,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
                   </p>
                 ) : null}
                 <div className="mt-5">
-                  <CopyBlock paragraphs={section.body} />
+                  <CopyBlock paragraphs={section.body} study={study} />
                 </div>
                 {section.gallery ? <ImageGallery items={section.gallery} /> : null}
               </article>
@@ -135,7 +205,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
             </div>
           ) : null}
           <div className="mt-8">
-            <ResultsText paragraphs={study.resultsText} />
+            <ResultsText paragraphs={study.resultsText} study={study} />
           </div>
         </div>
       </section>
@@ -144,7 +214,7 @@ export function CaseStudyTemplate({ study }: { study: CaseStudy }) {
         <div className="surface mx-auto max-w-7xl rounded-lg p-6 sm:p-9">
           <SectionHeader title="What I Learned" />
           <div className="mt-6">
-            <CopyBlock paragraphs={study.whatILearned} />
+            <CopyBlock paragraphs={study.whatILearned} study={study} />
           </div>
         </div>
       </section>

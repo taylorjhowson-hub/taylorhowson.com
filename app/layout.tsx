@@ -18,6 +18,13 @@ export const metadata: Metadata = {
   title: "Taylor Howson | Product Portfolio",
   description:
     "Taylor Howson is a Product Manager designing products that make complex work feel simple.",
+  icons: {
+    icon: [
+      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/icon.svg", type: "image/svg+xml" },
+    ],
+    apple: "/apple-icon.svg",
+  },
 };
 
 export default function RootLayout({
